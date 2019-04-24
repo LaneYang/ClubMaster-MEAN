@@ -1,0 +1,29 @@
+
+.top-margin {
+  margin-top: 50px;
+}
+
+.nav-padding {
+  padding-bottom: 50px;
+}
+
+.right-margin {
+  margin-right: 10px
+}
+
+.nav-blue {
+  background-color: #337ab7;
+}
+
+.navbar-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.white-text {
+  color: #FFFFFF;
+}
+
+.text-middle {
+  text-align: center;
+}

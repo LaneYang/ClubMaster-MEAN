@@ -1,0 +1,50 @@
+.bg {
+  background-image: url("https://mytecharmor.com/wp-content/uploads/2016/07/Website-Background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+}
+
+.img-slide {
+  width: 20vw;
+  height: 60vw;
+}
+
+.right-margin {
+  margin-right: 10px
+}
+
+.container-padding {
+  padding-top: 30px;
+}
+
+.nav-padding {
+  padding-bottom: 70px;
+}
+
+.bordered {
+  border: 1px solid #666666;
+}
+
+.font-sketch {
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.grey-text {
+  color: #666666;
+}
+
+.nav-grey {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.bold-text {
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px #aaa;
+}
+
+.text-box {
+  background-color: white;
+}
+

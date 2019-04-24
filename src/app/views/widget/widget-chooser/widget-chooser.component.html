@@ -1,0 +1,52 @@
+<nav class="navbar cl-blue-navbar fixed-top">
+  <div class="container-fluid row">
+    <div class="pull-left">
+      <a routerLink="../"
+         class="navbar-text cl-text-white right-margin">
+        <span class="fa fa-angle-left"></span>
+      </a>
+      <a routerLink="./"
+         class="navbar-text cl-text-white">
+        Choose Widget for {{club.name}}
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid container-padding nav-padding">
+  <ul class="ul-no-style">
+    <li class="li-margin">
+      <a (click)="createWidget('HEADER')" class="btn-link">
+        Header
+      </a>
+    </li>
+    <li class="li-margin">
+      <a (click)="createWidget('HTML')" class="btn-link">
+        HTML
+      </a>
+    </li>
+    <li class="li-margin">
+      <a (click)="createWidget('IMAGE')" class="btn-link">
+        Image
+      </a>
+    </li>
+    <li class="li-margin">
+      <a (click)="createWidget('YOUTUBE')" class="btn-link">
+        YouTube
+      </a>
+    </li>
+  </ul>
+</div>
+
+<nav class="navbar fixed-bottom cl-blue-navbar">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text cl-text-white pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="/founder"
+       class="navbar-text cl-text-white pull-right">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>

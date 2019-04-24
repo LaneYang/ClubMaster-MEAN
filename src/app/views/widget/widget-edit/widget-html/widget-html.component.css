@@ -1,0 +1,72 @@
+.right-margin {
+  margin-right: 10px
+}
+
+.container-padding {
+  padding-top: 30px;
+}
+
+.nav-padding {
+  padding-bottom: 70px;
+}
+
+.nav-grey {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.navbar-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.icon-padding {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.ul-no-style {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+.li-margin {
+  font-size: 18px;
+  margin: 18px;
+  padding: 0;
+}
+
+textarea {
+  margin-bottom: 10px;
+}
+
+.widget {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.widget-image {
+  display: inline;
+  width: 100%;
+}
+
+.widget-icons{
+  background-color: white;
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  right: 0;
+}
+
+.index-style {
+  padding: 20%;
+}
+.cl-blue-navbar{
+  background-color: #337ab7;
+}
+
+.cl-text-white{
+  color: #fff;
+}

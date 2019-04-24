@@ -1,0 +1,46 @@
+<nav class="navbar fixed-top nav-blue">
+  <div class="container-fluid row">
+    <div class="pull-left">
+      <a routerLink="/"
+         class="navbar-text white-text right-margin">
+        <span class="fa fa-angle-left"></span>
+      </a>
+      <a routerLink="./"
+         class="navbar-text white-text">
+        Top Clubs
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container nav-padding top-margin text-middle">
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Club Name</th>
+      <th scope="col">Club Title</th>
+      <th scope="col">Average Rating</th>
+      <th scope="col">Number of Ratings</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let club of clubs">
+      <th scope="row">{{club.name}}</th>
+      <td>{{club.title}}</td>
+      <td>{{club.rating}}</td>
+      <td>{{club.numRating}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<nav class="navbar fixed-bottom nav-blue">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text white-text pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+  </div>
+</nav>
+
+

@@ -1,0 +1,49 @@
+input.form-control {
+  margin-bottom: 10px;
+}
+
+.btn {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.form-check {
+  margin-bottom: 10px;
+}
+
+.bg {
+  background-image: url("https://mytecharmor.com/wp-content/uploads/2016/07/Website-Background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.nav-padding {
+  padding-bottom: 70px;
+}
+
+.right-margin {
+  margin-right: 10px
+}
+
+.nav-blue {
+  background-color: #337ab7;
+}
+
+.navbar-text {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.white-text {
+  color: #FFFFFF;
+}
+
+.blue-text {
+  color: #337ab7;
+}
+
+.white-bg {
+  background-color: white;
+}
+

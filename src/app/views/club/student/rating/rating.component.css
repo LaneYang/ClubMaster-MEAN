@@ -1,0 +1,49 @@
+.top-margin {
+  margin-top: 50px;
+}
+
+.nav-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.right-margin {
+  margin-right: 10px
+}
+
+.nav-blue {
+  background-color: #337ab7;
+}
+
+.navbar-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.white-text {
+  color: #FFFFFF;
+}
+
+.text-middle {
+  text-align: center;
+}
+
+.bg {
+  background-image: url("https://mytecharmor.com/wp-content/uploads/2016/07/Website-Background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.font-sketch {
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.large-font {
+  font-size: 30px;
+}

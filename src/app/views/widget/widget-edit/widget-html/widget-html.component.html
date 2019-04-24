@@ -1,0 +1,54 @@
+<nav class="navbar cl-blue-navbar fixed-top">
+  <div class="container-fluid row">
+    <div class="pull-left">
+      <a routerLink="../"
+         class="navbar-text cl-text-white right-margin">
+        <span class="fa fa-angle-left"></span>
+      </a>
+      <a routerLink="./"
+         class="navbar-text cl-text-white">
+        Edit Widget
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container container-padding nav-padding">
+  <div *ngIf="errorFlag"
+       class="alert alert-danger">
+    {{errorMsg}}
+  </div>
+  <label for="WidgetHtmlName">Widget Name</label>
+  <input id="WidgetHtmlName"
+         type="text"
+         class="form-control"
+         placeholder="name"
+         [(ngModel)]="widget._id"
+         disabled/>
+  <label>HTML</label>
+  <quill-editor [(ngModel)]="widget.text"></quill-editor>
+  <br/>
+
+  <button class="btn btn-success btn-block"
+     (click)="updateWidget()">
+    Update
+  </button>
+  <button class="btn btn-danger btn-block"
+     (click)="deleteWidget()">
+    Delete
+  </button>
+</div>
+
+<nav class="navbar fixed-bottom cl-blue-navbar">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text cl-text-white pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="/founder"
+       class="navbar-text cl-text-white pull-right">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>
+

@@ -1,0 +1,121 @@
+<nav class="navbar cl-blue-navbar fixed-top">
+  <div class="container-fluid row">
+    <div class="navbar-text pull-left">
+      <a routerLink="../" class="cl-text-white cl-icon-padding">
+          <span class="fas fa-chevron-left">
+          </span>
+      </a>
+      <a class="cl-text-white cl-text-bold" routerLink="./">
+        Edit Student
+      </a>
+    </div>
+    <div class="pull-right">
+      <a routerLink="new" class="cl-icon-padding cl-text-white">
+          <span class="fas fa-plus">
+          </span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="bg nav-padding">
+  <div></div>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col" class="text-align">Username</th>
+        <th scope="col" class="text-align">FirstName</th>
+        <th scope="col" class="text-align">LastName</th>
+        <th scope="col" class="text-align">Email</th>
+        <th scope="col" class="text-align">Actions</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let student of students">
+        <td class="text-align">{{student.username}}</td>
+        <td class="text-align">{{student.firstName}}</td>
+        <td class="text-align">{{student.lastName}}</td>
+        <td class="text-align">{{student.email}}</td>
+        <td class="text-align">
+          <button class="btn btn-outline-success" data-toggle="modal" data-target="#studentModal"
+                  (click)="findUserById(student._id)"><i class="fa fa-edit"></i>Edit
+          </button>
+          <button class="btn btn-outline-danger" (click)="deleteUser(student._id)">
+            <i class="fas fa-exclamation-triangle"></i>Delete
+          </button>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+
+    <br/>
+
+    <!--<Modal>-->
+    <div *ngIf="modalFlag">
+      <div class="modal fade" id="studentModal" tabindex="-1" role="dialog"
+           aria-labelledby="studentModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title" id="studentModalLabel">Edit User</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input id="username" type="text" placeholder="alice" class="form-control"
+                         [(ngModel)]="user.username" name="username" disabled/>
+                </div>
+                <div class="form-group">
+                  <label for="firstName">FirstName</label>
+                  <input id="firstName" type="text" placeholder="Alice" class="form-control"
+                         [(ngModel)]="user.firstName" name="firstName"/>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">LastName</label>
+                  <input id="lastName" type="text" placeholder="Wonderland" class="form-control"
+                         [(ngModel)]="user.lastName" name="lastName"/>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input id="email" type="text" placeholder="alice@gmail.com" class="form-control"
+                         [(ngModel)]="user.email" name="email"/>
+                </div>
+              </form>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="updateUser(user._id, user)" data-dismiss="modal">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <a class="btn btn-info btn-block"
+       routerLink="new">Add new student</a>
+  </div>
+</div>
+
+<nav class="navbar fixed-bottom cl-blue-navbar">
+  <div class="container-fluid row">
+    <a routerLink="/"
+       class="navbar-text cl-text-white pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="../"
+       class="navbar-text cl-text-white pull-right">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>

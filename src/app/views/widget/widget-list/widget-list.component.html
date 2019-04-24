@@ -1,0 +1,86 @@
+<nav class="navbar cl-blue-navbar fixed-top">
+  <div class="container-fluid row">
+    <div class="pull-left">
+      <a routerLink="../../"
+         class="navbar-text right-margin cl-text-white">
+        <span class="fa fa-angle-left"></span>
+      </a>
+      <a routerLink="./"
+         class="navbar-text cl-text-white">
+        {{club.name + ' ' + club.title}}
+      </a>
+    </div>
+    <div class="pull-right">
+      <a routerLink="./new"
+         class="navbar-text cl-text-white right-margin">
+        <span class="fa fa-plus"></span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container container-padding nav-padding">
+  <ul class="ul-no-style" appSortable (newIndexes)="reorderWidgets($event)">
+    <li class="widget" *ngFor="let wid of widgets">
+      <div class="widget-icons">
+        <a routerLink="./" class="pull-right black-text">
+          <span class="fa fa-bars"></span>
+        </a>
+        <a routerLink="./{{wid._id}}" class="pull-right">
+          <span class="fa fa-cog"></span>
+        </a>
+      </div>
+      <div [ngSwitch]="wid.type">
+        <div *ngSwitchCase="'HEADER'">
+          <div [ngSwitch]="wid.size">
+            <div *ngSwitchCase="'1'">
+              <h1>{{wid.text}}</h1>
+            </div>
+            <div *ngSwitchCase="'2'">
+              <h2>{{wid.text}}</h2>
+            </div>
+            <div *ngSwitchCase="'3'">
+              <h3>{{wid.text}}</h3>
+            </div>
+            <div *ngSwitchCase="'4'">
+              <h4>{{wid.text}}</h4>
+            </div>
+            <div *ngSwitchCase="'5'">
+              <h5>{{wid.text}}</h5>
+            </div>
+            <div *ngSwitchCase="'6'">
+              <h6>{{wid.text}}</h6>
+            </div>
+            <div *ngSwitchDefault>
+              <h1>{{wid.text}}</h1>
+            </div>
+          </div>
+        </div>
+        <div *ngSwitchCase="'IMAGE'">
+          <img class="img-responsive widget-image"
+               [src]="wid.url"/>
+        </div>
+        <div *ngSwitchCase="'YOUTUBE'">
+          <div class="embed-responsive embed-responsive-16by9 youtube-widget">
+            <iframe [src]="wid.url | safe"
+                    frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div *ngSwitchCase="'HTML'" [innerHTML]="wid.text"></div>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<nav class="navbar fixed-bottom cl-blue-navbar">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text cl-text-white pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="/founder"
+       class="navbar-text cl-text-white pull-right">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>

@@ -1,0 +1,106 @@
+.top-margin {
+  margin-top: 50px;
+}
+
+.nav-padding {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.right-margin {
+  margin-right: 10px
+}
+
+.nav-blue {
+  background-color: #337ab7;
+}
+
+.navbar-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.white-text {
+  color: #FFFFFF;
+}
+
+.text-middle {
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
+
+.extra-padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.cl-left-padding {
+  padding-left: 30px;
+}
+
+.bg-secondary {
+  background-color: lightgray;
+}
+
+.extra-right-padding {
+  padding-right: 30px;
+}
+
+.extra-left-padding {
+  padding-left: 30px;
+}
+
+.cl-widget-images {
+  position: relative;
+  /* width: 85%; */
+  display: inline;
+  z-index: 99;
+}
+
+.cl-full-height {
+  height: 100%;
+  min-height: 100%;
+}
+
+.cl-right-divider {
+  position: relative;
+  border-right: 3px solid gray;
+  padding-top: -70px;
+  padding-bottom: -70px;
+}
+
+input.ngInvalid.ngTouched {
+  border: 1px solid red;
+}
+
+.youtube-widget {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+}
+.youtube-widget iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container-padding {
+  padding-top: 30px;
+  padding-bottom: 70px;
+}
+
+.bg {
+  background-image: url("https://mytecharmor.com/wp-content/uploads/2016/07/Website-Background.png");
+  background-repeat: repeat;
+  background-attachment: fixed;
+  height: 100%;
+}

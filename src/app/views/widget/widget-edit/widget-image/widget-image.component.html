@@ -1,0 +1,78 @@
+<nav class="navbar cl-blue-navbar fixed-top">
+  <div class="container-fluid row">
+    <div class="pull-left">
+      <a routerLink="../"
+         class="navbar-text cl-text-white right-margin">
+        <span class="fa fa-angle-left"></span>
+      </a>
+      <a routerLink="./"
+         class="navbar-text cl-text-white">
+        Edit Widget
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container container-padding nav-padding">
+  <form>
+    <div *ngIf="errorFlag"
+         class="alert alert-danger">
+      {{errorMsg}}
+    </div>
+    <label for="WidgetImageName">Widget Name</label>
+    <input id="WidgetImageName"
+           name="WidgetImageName"
+           type="text"
+           class="form-control"
+           placeholder="name"
+           [(ngModel)]="widget._id"
+           disabled/>
+    <label for="WidgetImageURL">URL</label>
+    <input id="WidgetImageURL"
+           name="WidgetImageURL"
+           type="url"
+           class="form-control"
+           placeholder="URL"
+           [(ngModel)]="widget.url"/>
+  </form>
+
+  <label for="WidgetImageUpload">Upload</label>
+  <form ngNoForm action="{{baseUrl}}/api/upload" method="post" enctype="multipart/form-data">
+    <input name="myFile"
+           id="WidgetImageUpload"
+           placeholder="No file chosen"
+           type="file" class="form-control"/>
+    <input name="widgetId" value="{{widgetId}}" style="display: none"/>
+    <input name="clubId" value="{{clubId}}" style="display: none"/>
+    <button type="submit" class="btn btn-block btn-primary">Upload Image</button>
+  </form>
+  <p></p>
+
+  <button class="btn btn-warning btn-block"
+     routerLink="flickr">
+    Search on Flickr
+  </button>
+  <button class="btn btn-success btn-block"
+     (click)="updateWidget()">
+    Update
+  </button>
+  <button class="btn btn-danger btn-block"
+     (click)="deleteWidget()">
+    Delete
+  </button>
+</div>
+
+<nav class="navbar fixed-bottom cl-blue-navbar">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text pull-left cl-text-white">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="/founder"
+       class="navbar-text pull-right cl-text-white">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>
+
+

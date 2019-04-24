@@ -1,0 +1,57 @@
+<nav class="navbar cl-blue-navbar fixed-top">
+  <div class="container-fluid row">
+    <div class="pull-left">
+      <a routerLink="../"
+         class="navbar-text right-margin cl-text-white">
+        <span class="fa fa-angle-left"></span>
+      </a>
+      <a routerLink="./"
+         class="navbar-text cl-text-white">
+        Edit Widget
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container container-padding nav-padding">
+  <div *ngIf="errorFlag"
+       class="alert alert-danger">
+    {{errorMsg}}
+  </div>
+  <label for="WidgetYoutubeName">Widget Name</label>
+  <input id="WidgetYoutubeName"
+         type="text"
+         class="form-control"
+         placeholder="name"
+         [(ngModel)]="widget._id"
+         disabled/>
+  <label for="WidgetYoutubeURL">URL</label>
+  <input id="WidgetYoutubeURL"
+         type="url"
+         class="form-control"
+         placeholder="URL"
+         [(ngModel)]="widget.url"/>
+
+  <button class="btn btn-success btn-block"
+     (click)="updateWidget()">
+    Update
+  </button>
+  <button class="btn btn-danger btn-block"
+     (click)="deleteWidget()">
+    Delete
+  </button>
+</div>
+
+<nav class="navbar fixed-bottom cl-blue-navbar">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text pull-left cl-text-white">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="/founder"
+       class="navbar-text pull-right cl-text-white">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>
+

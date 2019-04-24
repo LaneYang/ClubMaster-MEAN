@@ -1,0 +1,19 @@
+body {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+input.form-control {
+  margin-bottom: 5px;
+}
+
+body, html {
+  height: 100%;
+  min-height: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+

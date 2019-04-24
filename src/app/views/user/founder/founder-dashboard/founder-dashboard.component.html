@@ -1,0 +1,38 @@
+<nav class="navbar fixed-top cl-blue-navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="cl-text-white navbar-brand cl-text-bold" routerLink="./">
+        Dashboard
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+<div class="bg">
+  <div></div>
+  <div class="container">
+
+    <h3>Hello, {{user.username}} </h3>
+    <br/>
+
+    <a class="btn btn-primary btn-block"
+       routerLink="/founder/clubs">View your clubs</a>
+    <br/>
+
+    <a class="btn btn-info btn-block"
+       routerLink="/founder/clubs/new">Add new clubs</a>
+    <br/>
+
+    <a class="btn btn-danger btn-block" (click)="logout()" routerLink="">Logout</a>
+
+  </div>
+</div>
+
+<nav class="navbar fixed-bottom cl-blue-navbar">
+  <a routerLink="/"
+     class="navbar-text cl-text-white pull-left">
+    <span class="fa fa-home"></span>
+  </a>
+</nav>
+

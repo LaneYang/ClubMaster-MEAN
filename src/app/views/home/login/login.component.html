@@ -1,0 +1,106 @@
+<nav class="navbar fixed-top nav-blue">
+  <div class="container-fluid row">
+    <div class="pull-left">
+      <a routerLink="./"
+         class="navbar-text white-text right-margin">
+        Login
+      </a>
+    </div>
+    <div class="pull-right">
+      <button routerLink="/register"
+         class="right-margin btn bordered blue-text white-bg">
+        Register
+      </button>
+      <button routerLink="/"
+              class="right-margin btn bordered blue-text white-bg">
+        Visit as Guest
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="bg">
+  <div></div>
+  <div class="container nav-padding">
+    <br/>
+    <div *ngIf="errorFlag"
+         class="alert alert-danger">
+      {{errorMsg}}
+    </div>
+
+    <h5>Choose your role: </h5>
+    <div class="form-check">
+      <input class="form-check-input"
+             type="radio"
+             name="exampleRadios"
+             id="student"
+             checked
+             [value]="'STUDENT'"
+             [(ngModel)]="type">
+      <label class="form-check-label" for="student">
+        Student
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input"
+             type="radio"
+             name="exampleRadios"
+             id="founder"
+             [value]="'PROFESSOR'"
+             [(ngModel)]="type">
+      <label class="form-check-label" for="founder">
+        Founder
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input"
+             type="radio"
+             name="exampleRadios"
+             id="admin"
+             [value]="'ADMIN'"
+             [(ngModel)]="type">
+      <label class="form-check-label" for="admin">
+        Admin
+      </label>
+    </div>
+    <br/>
+
+    <form (ngSubmit)="login()" #f="ngForm">
+      <label for="username">Username:</label>
+      <input type="text"
+             class="form-control"
+             placeholder="username"
+             name="username"
+             id="username"
+             ngModel required #username="ngModel"/>
+
+      <label for="password">Password:</label>
+      <input type="password"
+             class="form-control"
+             placeholder="password"
+             name="password"
+             id="password"
+             ngModel required #password="ngModel"/>
+
+      <button class="btn btn-primary btn-block"
+              type="submit"
+              [disabled]="!f.valid">Login
+      </button>
+    </form>
+    <div [hidden]="type!=='STUDENT'">
+    <a href="{{baseUrl}}/facebook/login" class="btn btn-primary btn-block">
+      Login with Facebook
+    </a>
+    </div>
+  </div>
+  <div></div>
+</div>
+
+<nav class="navbar fixed-bottom nav-blue">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text white-text pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+  </div>
+</nav>

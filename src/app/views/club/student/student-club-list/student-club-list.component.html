@@ -1,0 +1,62 @@
+<nav class="navbar fixed-top nav-blue">
+  <a class="navbar-brand" routerLink="/student">
+    <span class="fa fa-chevron-left text-white"></span>
+  </a>
+  <div class="navbar-brand text-white font-weight-bold pull-left">
+    Clubs
+  </div>
+  <a class="navbar-brand pull-right" routerLink="/student/clubs/new">
+    <span class="fa fa-plus text-white"></span>
+  </a>
+</nav>
+
+
+<div class="bg nav-padding">
+  <div></div>
+  <div class="container">
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col" class="text-align">Club Name</th>
+        <th scope="col" class="text-align">Club Title</th>
+        <th scope="col" class="text-align">Actions</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor = "let club of clubs">
+        <td class="text-align btn-link"
+            routerLink="/student/clubs/{{club._id}}/widget">{{club.name}}</td>
+        <td class="text-align">{{club.title}}</td>
+        <td class="actions">
+          <button class="btn btn-outline-success"
+                  routerLink="/student/clubs/{{club._id}}"><i class="fa fa-edit"></i>Rate</button>
+          <button class="btn btn-outline-danger" (click)="deleteClubForStudent(club._id)">
+            <i class="fas fa-exclamation-triangle"></i>Delete</button>
+        </td>
+      </tr>
+
+      </tbody>
+    </table>
+
+    <br/>
+
+    <a class="btn btn-info btn-block"
+       routerLink="new">Add New Club</a>
+  </div>
+</div>
+
+<nav class="navbar fixed-bottom nav-blue">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text white-text pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="../"
+       class="navbar-text white-text pull-right">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>
+
+

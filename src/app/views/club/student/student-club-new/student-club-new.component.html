@@ -1,0 +1,46 @@
+<nav class="navbar fixed-top nav-blue">
+  <a class="navbar-brand" routerLink="../">
+    <span class="fa fa-chevron-left text-white"></span>
+  </a>
+  <div class="navbar-brand text-white font-weight-bold">
+    Clubs
+  </div>
+  <!--<a class="navbar-brand pull-right" routerLink="/user/website/new">-->
+    <!--<span class="fa fa-plus text-white"></span>-->
+  <!--</a>-->
+</nav>
+
+<div class="bg">
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="form-group cl-8-top">
+        <label for="club-name">Club Name:</label>
+      </div>
+    </div>
+    <div class="col">
+      <input [(ngModel)]="clubName" type="text" id="club-name"
+             placeholder="clubname" ngModel required [ngModelOptions]="{standalone: true}">
+    </div>
+  </div>
+  <div *ngIf="errorFlag" class="alert alert-primary" role="alert">
+    {{errorMsg}}
+  </div>
+  <a (click)="createClub()" class="btn left btn-info btn-block cl-8-top">Submit</a>
+</div>
+</div>
+
+<nav class="navbar fixed-bottom nav-blue">
+  <div class="container-fluid">
+    <a routerLink="/"
+       class="navbar-text white-text pull-left">
+      <span class="fa fa-home"></span>
+    </a>
+    <a routerLink="../"
+       class="navbar-text white-text pull-right">
+      <span class="fa fa-user"></span>
+    </a>
+  </div>
+</nav>
+
+
