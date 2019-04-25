@@ -1,52 +1,39 @@
-<nav class="navbar nav-grey fixed-top">
-  <div class="container-fluid row">
-    <a routerLink="./" class="bold-text blue-text font-sketch pull-left">
-      <span class=" right-margin"></span>
-      Club Master
-    </a>
-    <div class="pull-right">
-      <button routerLink="./topclubs" class="btn btn-outline-primary right-margin">
-        Join today!
-      </button>
-      <a routerLink="./login" class="grey-text btn btn-outline-success">
-        Login
-      </a>
-      <a routerLink="./register" class="grey-text btn btn-outline-warning">
-        Register
-      </a>
+
+<!-- Navigation -->
+<style>
+  body{
+    padding-top: 0;
+  }
+</style>
+
+<nav class="navbar  navbar-expand-lg navbar-light fixed-top" id="mainNav">
+  <div class="container">
+    <a class="navbar-brand " href="#page-top">Club Master</a>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <button routerLink="./topclubs" class="btn nav-link btn-outline-primary right-margin">
+          Join today!
+        </button>
+
+        <a routerLink="./login" class=" nav-link grey-text btn btn-outline-success">
+          Login
+        </a>
+        <a routerLink="./register" class="nav-link grey-text btn btn-outline-warning">
+          Register
+        </a>
+      </ul>
     </div>
   </div>
 </nav>
 
-<div class="bg nav-padding">
-  <div id="carousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carousel" data-slide-to="0" class="active"></li>
+<!-- Header -->
+<header class="masthead">
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">CLUB MASTER</h1>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5">A place for students to find friends.</h2>
 
-    </ol>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100 img-responsive img-slide"
-             src="https://vignette.wikia.nocookie.net/club-penguin-rewritten/images/0/0e/Community-header-background/revision/latest?cb=20190405223225&format=original"
-             alt="First slide">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Welcome to Club Master!</h5>
-          <p>Your new place to find friends.</p>
-        </div>
-      </div>
-
-
-
+    </div>
   </div>
-
-
-
-
-<nav class="navbar fixed-bottom nav-grey">
-  <div class="pull-left">
-    <a href="https://cs5610spring19.herokuapp.com/">Home</a>
-  </div>
-  <div class="pull-right">
-    Lane/Zhexuan/Ashley
-  </div>
-</nav>
+</header>
