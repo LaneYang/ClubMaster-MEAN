@@ -18,6 +18,17 @@ background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, F
 ;
 }
 
+.navbar{
+  padding:1rem 1rem;
+}
+
+
+
+
+
+
+
+
 .navbar-text {
   font-size: 20px;
   font-weight: bold;
