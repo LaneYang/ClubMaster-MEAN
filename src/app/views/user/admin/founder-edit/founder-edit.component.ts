@@ -25,8 +25,8 @@ export class FounderEditComponent implements OnInit {
   deleteUser(userId) {
     return this.userService.deleteUserInServer(userId).subscribe(
       () => {
-        // this.router.navigate(['/admin/founder']);
-        this.ngOnInit(); // refresh current page
+
+        this.ngOnInit();
       }
     );
   }

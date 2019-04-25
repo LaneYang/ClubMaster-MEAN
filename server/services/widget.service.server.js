@@ -9,11 +9,11 @@ module.exports = function (app) {
   app.delete("/api/widget/:widgetId", deleteWidget);
   app.put("/api/club/:clubId/widget", reorderWidgets);
 
-  var multer = require('multer'); // npm install multer --save
+  var multer = require('multer');
   var upload = multer({dest: __dirname + '/../../src/assets/uploads'});
   app.post("/api/upload", upload.single('myFile'), uploadImage);
 
-  // var baseUrl = 'http://localhost:3100';
+
   var baseUrl = 'https://cs5610spring19.herokuapp.com';
   var n = -1;
 
@@ -80,16 +80,16 @@ module.exports = function (app) {
     var myFile = req.file;
 
     var callbackUrl = baseUrl + "/founder/clubs/" + clubId + "/widget/";
-    // var callbackUrl = "http://localhost:4200/founder/clubs/"+clubId+"/widget";
+
 
     if (myFile === null) {
       res.redirect(callbackUrl);
       return;
     }
-    var originalname = myFile.originalname; // file name on user's computer
-    var filename = myFile.filename;     // new file name in upload folder
-    var path = myFile.path;         // full path of uploaded file
-    var destination = myFile.destination;  // folder where file is saved to
+    var originalname = myFile.originalname;
+    var filename = myFile.filename;
+    var path = myFile.path;
+    var destination = myFile.destination;
     var size = myFile.size;
     var mimetype = myFile.mimetype;
 

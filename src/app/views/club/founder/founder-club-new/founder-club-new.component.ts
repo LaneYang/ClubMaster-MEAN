@@ -60,7 +60,7 @@ export class FounderClubNewComponent implements OnInit {
               this.router.navigate(['../'], {relativeTo: this.activatedRoute});
             },
             (error: any) => {
-              // Place an error message here
+
             }
           );
         }

@@ -71,13 +71,13 @@ export class ClubEditComponent implements OnInit {
     if (this.clubId != null && this.clubId.trim() !== '') {
       this.clubService.deleteClub(this.clubId).subscribe(
         (club: any) => {
-          // let url: any = '/user/' + this.developerId + '/website';
-          // this.router.navigate([url]);
+
+
           this.router.navigate(['../'], {relativeTo: this.activatedRoute});
 
         },
         (error: any) => {
-          // Place error message;
+
         }
       );
     }

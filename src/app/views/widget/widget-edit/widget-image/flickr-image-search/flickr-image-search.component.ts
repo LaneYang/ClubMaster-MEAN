@@ -53,10 +53,10 @@ export class FlickrImageSearchComponent implements OnInit {
     let url = 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server;
     url += '/' + photo.id + '_' + photo.secret + '_b.jpg';
 
-    // const widget = {
-    //   pageId : this.pageId,
-    //   url: url
-    // };
+
+
+
+
     this.widget.url = url;
 
     this.widgetService.updateWidgetInServer(this.widgetId, this.widget).subscribe(

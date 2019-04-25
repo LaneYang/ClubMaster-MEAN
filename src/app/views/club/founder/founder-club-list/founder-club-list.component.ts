@@ -34,7 +34,7 @@ export class FounderClubListComponent implements OnInit {
         this.ngOnInit();
       },
       (error: any) => {
-        // Place error message;
+
       }
     );
   }

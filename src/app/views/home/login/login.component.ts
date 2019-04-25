@@ -58,7 +58,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
-    // if already logged in, jump to dashboard.
+
     if (this.sharedService.user) {
       if (this.sharedService.user.type === 'STUDENT') {
         this.router.navigate(['/student']);

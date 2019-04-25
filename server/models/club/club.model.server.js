@@ -41,14 +41,14 @@ function updateClub(clubId, club) {
 
 function deleteClub(clubId) {
   return ClubModel.findByIdAndRemove(clubId);
-  // return ClubModel.findOne({_id: clubId})
-  //   .then(function(club) {
-  //     var userId = club._user;
-  //     ClubModel.remove({id: clubId})
-  //       .then(function() {
-  //         return UserModel.deleteClub(userId, clubId);
-  //       })
-  //   })
+
+
+
+
+
+
+
+
 }
 
 function topClubs() {

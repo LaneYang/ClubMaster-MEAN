@@ -6,7 +6,7 @@ var WidgetSchema = mongoose.Schema ({
   text: String,
   url: String,
   size: Number,
-  position: Number,    // for reorder use
+  position: Number,
   dateCreated: {type: Date, default: Date.now}
 }, {collection: "widget" });
 

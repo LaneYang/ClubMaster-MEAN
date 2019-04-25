@@ -28,7 +28,7 @@ module.exports = function (app) {
   }));
 
 
-  // config passport
+
   passport.serializeUser(serializeUser);
   passport.deserializeUser(deserializeUser);
 
@@ -49,7 +49,7 @@ module.exports = function (app) {
       );
   }
 
-  // config local strategy
+
   passport.use(new LocalStrategy(localStrategy));
 
   function localStrategy(username, password, done) {
@@ -71,7 +71,7 @@ module.exports = function (app) {
       );
   }
 
-  // config facebook strategy
+
   var facebookConfig = {
     clientID: process.env.FACEBOOK_CLIENT_ID ? process.env.FACEBOOK_CLIENT_ID : '123',
     clientSecret: process.env.FACEBOOK_CLIENT_SECRET ? process.env.FACEBOOK_CLIENT_SECRET : '123',
@@ -184,7 +184,7 @@ module.exports = function (app) {
       function (user) {
         var i;
         for (i = 0; i < user.clubs.length; i++) {
-          // HAVE TO USE "==", NOT "==="
+
           if (user.clubs[i] == clubId) {
             break;
           }
