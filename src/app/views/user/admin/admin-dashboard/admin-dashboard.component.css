@@ -104,3 +104,6 @@ background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, F
 
   height: 100%;
 }
+.navbar{
+  padding:1rem 1rem;
+}
