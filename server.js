@@ -14,7 +14,7 @@ const session = require('express-session');
 
 var secret = "random";
 if (process.env.SESSION_SECRET) {
-  secret = process.env.SESSION_SECRET;
+  secret = process.env. SESSION_SECRET;
 }
 app.use(session({
   secret: secret,
